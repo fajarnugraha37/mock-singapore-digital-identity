@@ -27,12 +27,11 @@ export function pki({ authHeaders, url, httpMethod, query, body, context }: {
     Object.entries(params).sort(([k1], [k2]) => k1.localeCompare(k2)),
   ) as ParsedUrlQueryInput;
 
-  const baseString =
-    httpMethod.toUpperCase() +
+  const baseString = httpMethod.toUpperCase() +
     '&' +
     url +
     '&' +
-    unescape(stringify(sortedParams))
+    unescape(stringify(sortedParams));
 
   return { signature, baseString }
 }
