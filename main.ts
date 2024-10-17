@@ -1,3 +1,4 @@
+import './deps.ts';
 import * as log from "@std/log";
 import { App } from './app/app.ts';
 
