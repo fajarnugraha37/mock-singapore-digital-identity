@@ -1,1 +1,1 @@
-export * from './promise-defer.ts';
+export * from "@lib/promise-util/promise-defer.ts";

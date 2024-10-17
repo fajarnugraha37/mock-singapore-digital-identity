@@ -1,7 +1,7 @@
-import { ExpiryMap } from '../../lib/index.ts';
-import { COMMON_CONTRACTS } from '../config/contracts.ts';
 import { randomBytes } from 'node:crypto';
 import { Buffer } from 'node:buffer';
+import { ExpiryMap } from "@lib/index.ts";
+import { COMMON_CONTRACTS } from "@app-config/contracts.ts";
 
 const profileAndNonceStore = new ExpiryMap(COMMON_CONTRACTS.AUTH_CODE_TIMEOUT);
 

@@ -1,7 +1,7 @@
-import './config/index.ts';
+import "@app-config/index.ts";
 import { Hono } from 'hono';
 import { serveStatic } from 'hono/deno';
-import { readFileAsUtf8 } from './util/index.ts';
+import { readFileAsUtf8 } from "@app-util/index.ts";
 import { getConsentHandler, getMyInfoHandler, getNDIV2Handler, getSPCPHandler, getSgIdHandler } from "./handlers/index.ts";
 
 

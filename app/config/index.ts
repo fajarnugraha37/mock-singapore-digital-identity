@@ -1,2 +1,2 @@
-export * from './contracts.ts';
-export * from './log.ts';
+export * from "@app-config/contracts.ts";
+export * from "@app-config/log.ts";

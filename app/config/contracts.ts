@@ -1,4 +1,4 @@
-import { readFileAsBuffer, readFileAsUtf8 } from "../util/file.ts";
+import { readFileAsBuffer, readFileAsUtf8 } from "@app-util/file.ts";
 
 
 export const API_CONTRACTS = {

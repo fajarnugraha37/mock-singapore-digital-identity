@@ -1,5 +1,5 @@
-import { myinfo } from './assertions.json.ts';
 import type { HonoRequest } from "hono";
+import { myinfo } from "@app-util/assertions.json.ts";
 
 export const buildAssertURL = (redirectURI: string, authCode: string, state: string) =>
     `${redirectURI}?code=${encodeURIComponent(authCode)}&state=${encodeURIComponent(state)}`;
