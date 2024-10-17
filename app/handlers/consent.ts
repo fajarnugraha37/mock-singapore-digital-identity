@@ -33,6 +33,8 @@ export const authorizeViaOIDC = authorize(
     (state) => `/singpass/authorize?client_id=MYINFO-CONSENTPLATFORM&redirect_uri=${API_CONTRACTS.MYINFO_ASSERT_ENDPOINT}&state=${state}`
 )
 
+export const authorizations: Record<string, any> = {};
+
 export function getConsentHandler({ isStateless = false }) {
     const app = new Hono();
 
@@ -81,8 +83,6 @@ export function getConsentHandler({ isStateless = false }) {
         return c.html(render(COMMON_CONTRACTS.CONSENT_TEMPLATE, params));
     });
 
-
-    const authorizations: Record<string, any> = {};
     app.post(API_CONTRACTS.AUTHORIZE_ENDPOINT, async (c) => {
         const id = cookie.getCookie(c, 'connect.sid');
         const code = randomUUID();
