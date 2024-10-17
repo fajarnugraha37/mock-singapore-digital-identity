@@ -6,8 +6,12 @@ COPY . .
 
 RUN deno install
 
-# Expose the port that Deno will listen to
+RUN addgroup appgroup 
+RUN adduser --home /home/application --disabled-password application
+RUN adduser application appgroup
+RUN chown -R application:appgroup /app
+USER application
+
 EXPOSE 80
 
-# Command to run the application
 CMD ["run", "-A", "main.ts"]
