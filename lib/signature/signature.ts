@@ -1,4 +1,3 @@
-/* eslint-disable max-params */
 import * as crypto from "node:crypto";
 import * as jose from "node-jose";
 import * as qs from "node:querystring";
