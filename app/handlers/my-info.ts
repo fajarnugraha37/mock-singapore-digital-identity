@@ -82,7 +82,7 @@ export function getMyInfoHandler(
         cert: COMMON_CONTRACTS.SERVICE_PROVIDER_CERT,
         pubKey: COMMON_CONTRACTS.SERVICE_PROVIDER_PUB_KEY,
     },
-    encryptMyInfo = true
+    encryptMyInfo = Deno.env.get('ENCRYPT_MYINFO') === 'true',
 ) {
     const app = new Hono;
     const allowedAttributes = myinfo[version].attributes;
