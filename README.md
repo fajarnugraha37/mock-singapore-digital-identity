@@ -16,6 +16,17 @@ $ export CP_RP_JWKS_ENDPOINT=http://localhost:8080/oauth2/jwks
 $ run -A main.ts
 ```
 
+## Integration Details
+The following things are needed to be configured for the integration:
+* Exposing the signature and encryption public keys via a JWKS endpoint
+* Use `private_key_jwt` client authentication with the `aud` claim set to the `iss` value and the `typ` header set to `JWT`
+* ID token needs to be decrypted with the private decryption key and signature verified against the Identity Provider's JWKS endpoint
+
+### Json Web Key Sets
+Mockpass will call the endpoint http://localhost:8080/oauth2/jwks in order to get the public keys of the application
+* The public encryption key used for Mockpass to encrypt the ID Token to send to the application
+* The public verification key used for Mockpass to verify the signature for the `private_key_jwt` client assertion
+
 ## Flow
 
 ```mermaid
