@@ -18,13 +18,13 @@ export const COMMON_CONTRACTS = {
     MY_INFO_V3: JSON.parse(readFileAsUtf8('static/private/myinfo/v3.json')),
     SPCP_KEY_PEM: readFileAsBuffer('static/private/certs/spcp-key.pem'),
     CONSENT_TEMPLATE: readFileAsUtf8('static/html/consent.html'),
-    MOCKPASS_PRIVATE_KEY: readFileAsBuffer('static/certs/spcp-key.pem'),
-    MOCKPASS_PUBLIC_KEY: readFileAsBuffer('static/certs/spcp.crt'),
+    MOCKPASS_PRIVATE_KEY: readFileAsBuffer('static/private/certs/spcp-key.pem'),
+    MOCKPASS_PUBLIC_KEY: readFileAsBuffer('static/private/certs/spcp.crt'),
     MYINFO_SECRET: Deno.env.get('SERVICE_PROVIDER_MYINFO_SECRET') ?? 'secret',
 
-    ASP_PUBLIC: readFileAsBuffer('static/certs/oidc-v2-asp-public.json'),
-    ASP_SECRET: readFileAsBuffer('static/certs/oidc-v2-asp-secret.json'),
-    RP_PUBLIC: readFileAsBuffer('static/certs/oidc-v2-rp-public.json'),
+    ASP_PUBLIC: readFileAsBuffer('static/private/certs/oidc-v2-asp-public.json'),
+    ASP_SECRET: readFileAsBuffer('static/private/certs/oidc-v2-asp-secret.json'),
+    RP_PUBLIC: readFileAsBuffer('static/private/certs/oidc-v2-rp-public.json'),
     SINGPASS_TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED: [
         'ES256',
         'ES384',
