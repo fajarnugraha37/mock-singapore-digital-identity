@@ -1,6 +1,6 @@
 import {} from '@std/async'
 import { clearTimeout, setTimeout } from 'node:timers'
-import { pDefer } from "./promise-defer.ts";
+import { pDefer } from "../promise-util/index.ts";
 
 
 export function mapAgeCleaner<K = unknown, V = Entry>(map: Map<K, V>, property = 'maxAge') {
