@@ -35,7 +35,7 @@ export const authorizeViaOIDC = authorize(
 
 export const authorizations: Record<string, any> = {};
 
-export function getConsentHandler({ isStateless = false }) {
+export function getConsentHandler(isStateless = COMMON_CONTRACTS.IS_STATELESS) {
     const app = new Hono();
 
     app.get(API_CONTRACTS.MYINFO_ASSERT_ENDPOINT, (c) => {

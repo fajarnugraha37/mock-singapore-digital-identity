@@ -1,5 +1,5 @@
 import "@app-config/index.ts";
-import { Hono } from 'hono';
+import { Hono, type HonoRequest } from 'hono';
 import { serveStatic } from 'hono/deno';
 import { readFileAsUtf8 } from "@app-util/index.ts";
 import { getConsentHandler, getMyInfoHandler, getNDIV2Handler, getSPCPHandler, getSgIdHandler } from "./handlers/index.ts";
@@ -18,11 +18,11 @@ function constructApp() {
 }
 
 function registerServiceHandler(app: Hono) {
-    app.route('/', getConsentHandler({ isStateless: false}));
+    app.route('/', getConsentHandler());
     app.route('/', getMyInfoHandler());
     app.route('/', getNDIV2Handler());
     app.route('/', getSPCPHandler());
-    app.route('/', getSgIdHandler());
+    app.route('/', getSgIdHandler((_req: HonoRequest) => true));
 }
 
 function registerIndexHandler(app: Hono) {
