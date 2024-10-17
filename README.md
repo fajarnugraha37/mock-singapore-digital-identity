@@ -3,7 +3,7 @@ A mock Singpass/Corppass server for development purposes
 
 ## Quick Start
 
-## Run App
+### Configuring the Identity Provider
 ```
 $ export APP_PORT=80
 $ export SHOW_LOGIN_PAGE=false
@@ -15,6 +15,11 @@ $ export CP_RP_JWKS_ENDPOINT=http://localhost:8080/oauth2/jwks
 
 $ run -A main.ts
 ```
+### Singpass v2 (NDI OIDC)
+
+### Corppass v2 (Corppass OIDC)
+
+### MyInfo v3
 
 ## Integration Details
 The following things are needed to be configured for the integration:
