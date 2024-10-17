@@ -21,6 +21,11 @@ export const COMMON_CONTRACTS = {
     CONSENT_TEMPLATE: readFileAsUtf8('static/html/consent.html'),
     MOCKPASS_PRIVATE_KEY: readFileAsBuffer('static/private/certs/spcp-key.pem'),
     MOCKPASS_PUBLIC_KEY: readFileAsBuffer('static/private/certs/spcp.crt'),
+    
+    SERVICE_PROVIDER_CERT: readFileAsBuffer('static/private/certs/server.crt'),
+    SERVICE_PROVIDER_PUB_KEY: readFileAsBuffer('static/private/certs/key.pub'),
+    IS_STATELESS: Deno.env.get('MOCKPASS_STATELESS') === 'true',
+
     MYINFO_SECRET: Deno.env.get('SERVICE_PROVIDER_MYINFO_SECRET') ?? 'secret',
 
     ASP_PUBLIC: readFileAsBuffer('static/private/certs/oidc-v2-asp-public.json'),
