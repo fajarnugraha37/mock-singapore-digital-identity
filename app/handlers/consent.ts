@@ -3,10 +3,10 @@ import { randomUUID } from "node:crypto";
 import { pick } from "@std/collections";
 import { Hono, type Context } from "hono";
 import * as cookie from 'hono/cookie';
-import { render } from 'https://deno.land/x/mustache_ts@v0.4.1.1/mustache.ts';
-import { API_CONTRACTS, COMMON_CONTRACTS } from "../config/contracts.ts";
-import { lookUpByAuthCode } from "../util/index.ts";
-import { myinfo } from "../util/assertions.json.ts";
+import { render } from 'mustache_ts';
+import { API_CONTRACTS, COMMON_CONTRACTS } from "@app-config/contracts.ts";
+import { lookUpByAuthCode } from "@app-util/index.ts";
+import { myinfo } from "@app-util/assertions.json.ts";
 
 
 export const authorize = (redirectTo: (v: string) => string) => (c: Context) => {

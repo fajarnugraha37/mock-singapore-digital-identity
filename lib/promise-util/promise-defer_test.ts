@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { pDefer } from "../promise-util/promise-defer.ts";
+import { pDefer } from "@lib/promise-util/promise-defer.ts";
 
 Deno.test(async function pDeferTest() {
 	const fixture = Symbol('fixture');

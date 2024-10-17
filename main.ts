@@ -1,6 +1,6 @@
-import './deps.ts';
+import "@deps";
 import * as log from "@std/log";
-import { App } from './app/app.ts';
+import { App } from "@app";
 
 
 Deno.serve({ 

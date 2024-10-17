@@ -1,5 +1,5 @@
 import { assertEquals, assertFalse } from "@std/assert";
-import { mapAgeCleaner } from "./expiry-map-cleaner.ts";
+import { mapAgeCleaner } from "@lib/expiry-collections/expiry-map-cleaner.ts";
 import { delay } from "@std/async/delay";
 
 

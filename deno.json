@@ -22,11 +22,20 @@
     "jose": "npm:jose@^5.9.4",
     "jsonwebtoken": "npm:jsonwebtoken@^9.0.2",
     "node-jose": "npm:node-jose@^2.2.0",
-    "zod": "npm:zod@^3.23.8"
+    "zod": "npm:zod@^3.23.8",
+    "mustache_ts": "https://deno.land/x/mustache_ts@v0.4.1.1/mustache.ts",
+    "@deps": "./deps.ts",
+    "@app": "./app/app.ts",
+    "@lib/": "./lib/",
+    "@app-config/": "./app/config/",
+    "@app-util/": "./app/util/",
+    "@app-handlers/": "./app/handlers/",
+    "@static/": "./static/"
   },
   "compilerOptions": {
     "types": ["./types"],
     "strict": false,
     "noImplicitAny": false
-  }
+  },
+  "venor": true
 }

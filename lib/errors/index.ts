@@ -1,1 +1,1 @@
-export * from './entity-not-found.error.ts';
+export * from "@lib/errors/entity-not-found.error.ts";

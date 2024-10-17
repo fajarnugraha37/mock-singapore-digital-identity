@@ -1,4 +1,4 @@
-import { COMMON_CONTRACTS } from "../config/contracts.ts";
+import { COMMON_CONTRACTS } from "@app-config/contracts.ts";
 
 export const myinfo = {
   v3: COMMON_CONTRACTS.MY_INFO_V3,

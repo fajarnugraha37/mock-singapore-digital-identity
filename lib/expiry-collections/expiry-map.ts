@@ -1,4 +1,4 @@
-import { mapAgeCleaner } from "./expiry-map-cleaner.ts";
+import { mapAgeCleaner } from "@lib/expiry-collections/expiry-map-cleaner.ts";
 
 interface Entry<V> {
 	maxAge: number;

@@ -1,8 +1,8 @@
 import { randomBytes } from 'node:crypto';
 import { JWK, JWS } from 'node-jose';
-import { singPassAccounts, corpPassAccounts } from './assertions.json.ts';
-import { hashToken } from "./crypto.ts";
-import { COMMON_CONTRACTS } from "../config/contracts.ts";
+import { singPassAccounts, corpPassAccounts } from "@app-util/assertions.json.ts";
+import { hashToken } from "@app-util/crypto.ts";
+import { COMMON_CONTRACTS } from "@app-config/contracts.ts";
 
 export const signingPem = COMMON_CONTRACTS.SPCP_KEY_PEM;
 
