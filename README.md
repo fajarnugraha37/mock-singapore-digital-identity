@@ -1,4 +1,4 @@
-# Deno mock-singapore-digital-identity
+# [WIP] Deno mock-singapore-digital-identity
 A mock Singpass/Corppass server for development purposes
 
 ## Quick Start
