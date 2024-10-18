@@ -28,9 +28,13 @@ export const COMMON_CONTRACTS = {
 
     MYINFO_SECRET: Deno.env.get('SERVICE_PROVIDER_MYINFO_SECRET') ?? 'secret',
 
-    ASP_PUBLIC: readFileAsBuffer('static/private/certs/oidc-v2-asp-public.json'),
-    ASP_SECRET: readFileAsBuffer('static/private/certs/oidc-v2-asp-secret.json'),
-    RP_PUBLIC: readFileAsBuffer('static/private/certs/oidc-v2-rp-public.json'),
+    ASP_PUBLIC: readFileAsUtf8('static/private/certs/oidc-v2-asp-public.json'),
+    ASP_SECRET: readFileAsUtf8('static/private/certs/oidc-v2-asp-secret.json'),
+    RP_PUBLIC: readFileAsUtf8('static/private/certs/oidc-v2-rp-public.json'),
+    TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED: {
+        singPass: [],
+        corpPass: [],
+    },
     SINGPASS_TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED: [
         'ES256',
         'ES384',
@@ -50,6 +54,10 @@ export const COMMON_CONTRACTS = {
         singPass: [],
         corpPass: [],
     }
+}
+COMMON_CONTRACTS.TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED = {
+    singPass: COMMON_CONTRACTS.SINGPASS_TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED,
+    corpPass: COMMON_CONTRACTS.CORPPASS_TOKEN_ENDPOINT_AUTH_SIGNING_ALG_VALUES_SUPPORTED,
 }
 COMMON_CONTRACTS.ID_TOKEN_ENCRYPTION_ALG_VALUES_SUPPORTED = {
     singPass: COMMON_CONTRACTS.SINGPASS_ID_TOKEN_ENCRYPTION_ALG_VALUES_SUPPORTED,
